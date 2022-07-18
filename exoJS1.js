@@ -69,3 +69,38 @@ function calculator(valeur1, valeur2){
 }
 document.querySelector("#calcul").addEventListener("click", calculator);
 
+
+// Cumul, moyenne
+// On a un champ d’input.
+//  À chaque fois que l’utilisateur y entre une valeur (validée en appuyant sur un bouton par exemple), 
+//  vous affichez le cumul de toutes
+//  les valeurs entrées depuis le début ainsi que la moyenne des valeurs entrées.
+
+// Créez un tableau pour stocker les valeurs (var inputVals = [];
+// var inputVals = [];
+
+// Pour ajouter une valeur à un tableau : 
+// inputVals.push(parseInt(document.querySelector("#myInput").value));
+
+
+const result = document.querySelector("#cummul");
+const moyenne = document.querySelector("#moyenne");
+let inputVals = [];
+total = 0;
+let average;
+
+document.querySelector("#validate").addEventListener("click", () => {
+  const value = parseInt(document.querySelector("#nombre").value);
+  // ajouter le valeur dans un tableau
+  inputVals.push(value);
+  // pour afficher le valeur rentre
+  result.innerHTML = inputVals;
+  // pour cummule tout les valeur rentre
+  total += value;
+  // pour afficher le total de valeur
+  result.innerHTML = total;
+  // pour avoir moyenne de tout les valeur rentre
+  average = total / inputVals.length;
+  // pour afficher le moyenne de valeur rentre
+  moyenne.innerHTML = avarege;
+});
