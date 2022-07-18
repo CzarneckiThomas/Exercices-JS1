@@ -93,14 +93,14 @@ document.querySelector("#validate").addEventListener("click", () => {
   const value = parseInt(document.querySelector("#nombre").value);
   // ajouter le valeur dans un tableau
   inputVals.push(value);
-  // pour afficher le valeur rentre
+  // pour afficher la valeur rentrée
   result.innerHTML = inputVals;
-  // pour cummule tout les valeur rentre
+  // pour cummule tout les valeurs rentée
   total += value;
-  // pour afficher le total de valeur
+  // pour afficher le total des valeurs
   result.innerHTML = total;
-  // pour avoir moyenne de tout les valeur rentre
+  // pour avoir moyenne de tout les valeur rentrées
   average = total / inputVals.length;
-  // pour afficher le moyenne de valeur rentre
+  // pour afficher le moyenne de valeur rentrée
   moyenne.innerHTML = avarege;
 });
